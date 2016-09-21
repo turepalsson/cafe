@@ -11,11 +11,14 @@ with psycopg2.connect(dbname = 'sweden') as conn:
                            1.0/300)''')
     features = []
     for row in c.fetchall():
-        fid, geom, name = row
+        fid, geomstr, name = row
+        geom = json.loads(geomstr)
         props = { 'id': fid, 'name': name }
-        obj = { 'type': 'feature', 'properties': props, 'geometry': geom }
+        obj = { 'type': 'Feature', 'properties': props, 'geometry': geom }
         features.append(obj)
 
-coll = { 'type': 'featurecollection', 'features': features }
+coll = { 'type': 'FeatureCollection', 'features': features }
 
 json.dump(coll, sys.stdout)
+sys.stdout.write('\n')
+
