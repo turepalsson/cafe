@@ -20,7 +20,7 @@ def cafes(out):
     
     coll = { 'type': 'FeatureCollection', 'features': features }
     
-    json.dump(coll, out)
+    json.dump(coll, out, indent = 2)
     out.write('\n')
 
 def main():
