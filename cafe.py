@@ -10,16 +10,18 @@ def cafes(out):
                 AND st_dwithin(g, (SELECT g FROM feature
                                     WHERE tags->'name' LIKE 'Ejes%'),
                                1.0/300)''')
-        features = []
-        for row in c.fetchall():
-            fid, geomstr, name = row
-            geom = json.loads(geomstr)
-            props = { 'id': fid, 'name': name }
-            obj = { 'type': 'Feature', 'properties': props, 'geometry': geom }
-            features.append(obj)
-    
+        features = [
+            {
+                'type': 'Feature',
+                'properties': {
+                    'id': row[0],
+                    'name': row[2]
+                },
+                'geometry': json.loads(row[1])
+            } for row in c ]
+
     coll = { 'type': 'FeatureCollection', 'features': features }
-    
+
     json.dump(coll, out, indent = 2)
     out.write('\n')
 
