@@ -1,3 +1,3 @@
 cafes.geojson: cafe.py
-	python cafe.py >temp
+	python3 cafe.py >temp
 	mv temp $@
