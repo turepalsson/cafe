@@ -1,26 +1,21 @@
-import json, sys
+import json
+import sys
+
 import psycopg2
 
 def cafes(out):
     with psycopg2.connect(dbname = 'sweden') as conn:
         c = conn.cursor()
-        c.execute('''SELECT id, ST_AsGeoJSON(g) AS g, tags->'name' AS name
-          FROM feature
-          WHERE tags @> 'amenity=>cafe'
-                AND st_dwithin(g, (SELECT g FROM feature
-                                    WHERE tags->'name' LIKE 'Ejes%'),
-                               1.0/300)''')
-        features = [
-            {
-                'type': 'Feature',
-                'properties': {
-                    'id': row[0],
-                    'name': row[2]
-                },
-                'geometry': json.loads(row[1])
-            } for row in c ]
+        c.execute('''SELECT ST_AsGeoJSON(cafe)
+          FROM feature cafe, feature ref
+          WHERE cafe.tags @> 'amenity=>cafe'
+            AND ref.tags @> 'shop=>chocolate,name=>Ejes'
+            AND ST_DWithin(cafe.g, ref.g, 1.0/300)''')
 
-    coll = { 'type': 'FeatureCollection', 'features': features }
+        coll = {
+            'type': 'FeatureCollection',
+            'features': [json.loads(row[0]) for row in c]
+        }
 
     json.dump(coll, out, indent = 2)
     out.write('\n')

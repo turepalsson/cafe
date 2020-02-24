@@ -3,114 +3,172 @@
   "features": [
     {
       "type": "Feature",
-      "properties": {
-        "id": 4408437,
-        "name": "Delantina"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          18.0924662,
-          59.34424
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 4408444,
-        "name": "Bistro V"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          18.0903794,
-          59.3423252
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 4452382,
-        "name": "Stockholms glass & pastahus"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          18.0923247,
-          59.3409133
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 4622995,
-        "name": "Caf\u00e9 147"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          18.0900598,
-          59.3412205
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 5066229,
-        "name": "Espresso House"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          18.0912257,
-          59.3389822
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 5136348,
-        "name": "Joe & The Juice"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          18.0906882,
-          59.3400566
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 5136700,
-        "name": "Kahls The & Kaffehandel"
-      },
       "geometry": {
         "type": "Point",
         "coordinates": [
           18.0910621,
           59.339544
         ]
+      },
+      "properties": {
+        "id": 5711801,
+        "nodeid": 5908740007,
+        "wayid": null,
+        "relationid": null,
+        "tags": {
+          "name": "Kahls The & Kaffehandel",
+          "level": "0",
+          "amenity": "cafe",
+          "wheelchair": "yes"
+        }
       }
     },
     {
       "type": "Feature",
-      "properties": {
-        "id": 5136714,
-        "name": "Blueberry"
-      },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          18.0910794,
-          59.3391473
+          18.0906882,
+          59.3400566
         ]
+      },
+      "properties": {
+        "id": 5711445,
+        "nodeid": 5906664868,
+        "wayid": null,
+        "relationid": null,
+        "tags": {
+          "name": "Joe & The Juice",
+          "level": "0",
+          "amenity": "cafe",
+          "wheelchair": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.0911737,
+          59.3392248
+        ]
+      },
+      "properties": {
+        "id": 5711815,
+        "nodeid": 5908740021,
+        "wayid": null,
+        "relationid": null,
+        "tags": {
+          "name": "Blueberry",
+          "level": "0",
+          "amenity": "cafe",
+          "wheelchair": "yes"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.0900598,
+          59.3412205
+        ]
+      },
+      "properties": {
+        "id": 5199342,
+        "nodeid": 1872293746,
+        "wayid": null,
+        "relationid": null,
+        "tags": {
+          "name": "Caf\u00e9 147",
+          "amenity": "cafe"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.0912464,
+          59.3390056
+        ]
+      },
+      "properties": {
+        "id": 5641308,
+        "nodeid": 5124175622,
+        "wayid": null,
+        "relationid": null,
+        "tags": {
+          "name": "Espresso House",
+          "level": "0",
+          "amenity": "cafe",
+          "wheelchair": "yes",
+          "opening_hours": "Mo-Fr 07:30-19:00; Sa 09:30-18:00; Su 09:30-18:00"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.0923247,
+          59.3409133
+        ]
+      },
+      "properties": {
+        "id": 5028623,
+        "nodeid": 707627938,
+        "wayid": null,
+        "relationid": null,
+        "tags": {
+          "name": "Stockholms glass & pastahus",
+          "amenity": "cafe",
+          "wheelchair": "no"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.0924662,
+          59.34424
+        ]
+      },
+      "properties": {
+        "id": 4984715,
+        "nodeid": 373445062,
+        "wayid": null,
+        "relationid": null,
+        "tags": {
+          "name": "Delantina",
+          "amenity": "cafe"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.0903794,
+          59.3423252
+        ]
+      },
+      "properties": {
+        "id": 4984721,
+        "nodeid": 373448980,
+        "wayid": null,
+        "relationid": null,
+        "tags": {
+          "name": "Bistro V",
+          "amenity": "cafe"
+        }
       }
     }
   ]
