@@ -3,8 +3,10 @@ import sys
 
 import psycopg2
 
+from contextlib import closing
+
 def cafes(out):
-    with psycopg2.connect(dbname = 'sweden') as conn:
+    with closing(psycopg2.connect(dbname = 'sweden')) as conn:
         c = conn.cursor()
         c.execute('''SELECT ST_AsGeoJSON(cafe)
           FROM feature cafe, feature ref
