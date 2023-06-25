@@ -3,8 +3,10 @@ import sys
 
 import psycopg2
 
+from contextlib import closing
+
 def cafes(out):
-    with psycopg2.connect(dbname='sweden', host='localhost') as conn:
+    with closing(psycopg2.connect(dbname='sweden')) as conn:
         c = conn.cursor()
         c.execute('''SELECT to_json(t)
                      FROM (SELECT cafe.g AS geometry, cafe.tags AS properties
@@ -19,6 +21,7 @@ def cafes(out):
         }
 
     json.dump(col, out, indent=2)
+
     out.write('\n')
 
 def main():
